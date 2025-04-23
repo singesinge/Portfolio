@@ -1,0 +1,575 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E7E5DF;
+    height: auto;
+}
+
+body.home {
+    background-image: url("../Assets/Background_accueil.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 20% 20% 40% 20%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: #E7E5DF;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    margin-left: 2vw;
+    cursor: pointer;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'League Spartan', sans-serif;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+header a:hover {
+    color: #F2B705;
+}
+
+.links {
+    grid-column: 3 / 4;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Animation reveal */
+[class*='reveal-'] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+/* Main */
+main {
+    margin-top: 25vh;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin-top: 10vh;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container p {
+    font-size: 2rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+hr {
+    border: 0.5px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 55vw;
+}
+
+/* Boutons unifiés */
+.btn {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+    transition: background 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn-yellow {
+    background-color: #fdd835;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-yellow:hover {
+    background-color: #fbc02d;
+}
+
+.btn-red {
+    background-color: #e53935;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-red:hover {
+    background-color: #c62828;
+}
+
+/* Formulaires login/edit */
+.form-login,
+.form-edit {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.form-login label,
+.form-edit label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"],
+.form-login input[type="email"],
+.form-edit input[type="text"],
+.form-edit input[type="password"],
+.form-edit input[type="email"] {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.form-login input:focus,
+.form-edit input:focus {
+    border-color: #F2B705;
+}
+
+/* Projet */
+
+.container-project {
+    width: 90%;
+    margin: 20vh auto;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container-project-title h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.container-project-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.project-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container-project-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Page Projet */
+
+.project-page {
+    width: 90%;
+    margin: 10vh auto;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    padding: 3rem 2rem;
+}
+
+.project-page h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.project-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.project-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.project-text h2 {
+    margin-bottom: 1rem;
+}
+
+.project-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.project-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    margin: 0 auto 2rem;
+    justify-content: center;
+}
+
+.project-carousel img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.project-details {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.project-details p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.project-final-image {
+    margin-bottom: 2rem;
+}
+
+.project-final-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Profil */
+.profil-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 5vw;
+    margin: 10vh auto;
+    max-width: 1000px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.profil,
+.profil-actions {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profil h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.profil-content {
+    text-align: left;
+}
+
+.profil-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.profil-actions h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .profil-wrapper {
+        flex-direction: column;
+    }
+
+    .profil,
+    .profil-actions {
+        width: 100%;
+    }
+}
+
+/* Supprimer profil */
+.form-delete {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    margin: 10vh auto;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+}
+
+.form-delete h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-delete p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.form-delete input[type="submit"] {
+    background-color: #e53935;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-delete input[type="submit"]:hover {
+    background-color: #c62828;
+}
+
+.form-delete input[type="button"] {
+    background-color: #fdd835;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Formulaire de contact */
+.contact-form-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'League Spartan', sans-serif;
+    margin-top: 15vh;
+}
+
+.contact-form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form-container label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: #F2B705;
+}
+
+.contact-form-container button {
+    background-color: #F2B705;
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-form-container button:hover {
+    background-color: #d9a403;
+}
+
+.contact-form-container .error-message {
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contact-form-container .success-message {
+    color: green;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-form-container h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+.success-message {
+    color: green;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+}
